@@ -44,6 +44,7 @@ def play(board)
     puts "Cat's Game!"
   else
     puts "Congratulations! Mr. #{winner(board)}"
+  end
 end
 
 def position_taken?(board, index)
