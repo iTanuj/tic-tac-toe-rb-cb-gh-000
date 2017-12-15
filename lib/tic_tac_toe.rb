@@ -47,7 +47,22 @@ end
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
-
+def turn_count(board)
+  counter=0
+  board.each do |char|
+    if char=="X" or char =="O"
+      counter+=1
+    end
+  end
+  return counter
+end
+def current_player(board)
+  if turn_count(board)%2==1
+    return "O"
+  else
+    return "X"
+  end
+end
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2], # Top row
